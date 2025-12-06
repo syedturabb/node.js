@@ -32,11 +32,34 @@ const fs = require('fs');
     
 // })
 
+            //Write File
+// fs.writeFile("hey.txt","hello h kese hi",function(err){
+//           if(err)   console.error(err)
+//             else   console.log("Done");
+            
+// })
+ 
+           //Copy file
+// fs.copyFile("hey.txt","./copy/hey.txt",function(err){
+//      if(err) console.error(err);
+//      else    console.log("Linked");
+     
+// })
+
+      //Make folder in a directory
+// fs.mkdir("./copy",function(err){
+//   if(err)   console.error(err);
+//   else  console.log("Done");
+  
+// })
+
+
+
   // Create a server 
-const http = require('http');
+// const http = require('http');
 
-const server = http.createServer(function(req,res){
-         res.end("Hello world!");
-})
+// const server = http.createServer(function(req,res){
+//          res.end("Hello world!");
+// })
 
-server.listen(3000);
+// server.listen(3000);
