@@ -1,4 +1,4 @@
-const fs = require('fs');
+// const fs = require('fs');
            //create a file
 // fs.appendFile("hey.txt","ma to acha hu ", function(err){
 //       if(err) console.log(err);
@@ -63,3 +63,42 @@ const fs = require('fs');
 // })
 
 // server.listen(3000);
+
+
+//npm i accessibility@3.0.9
+
+
+const express = require('express')
+const app = express()
+
+    //Middleware
+// app.use(function(req,res,next){
+//   console.log('middleware chala');
+//   next();
+// });
+
+// app.use(function(req,res,next){
+//   console.log('middleware chala dosre baar chaala');
+//   next();
+// });
+
+
+//route creation
+app.get('/', function(req, res){
+  res.send('Champsndnion')
+})
+
+app.get('/profile', function(req, res, next){
+  return next(new Error("something wnet wrong"))
+})
+
+//Error handler
+app.use((err, req, res, next) => {
+  console.error(err.stack)
+  res.status(500).send('Something broke!, we dont now what ')
+})
+
+
+app.listen(3000)
+
+

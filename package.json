@@ -4,12 +4,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "node./server.js",
+    "turab": "echo \"hello g\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "turab",
   "license": "ISC",
   "dependencies": {
-    "express": "^5.2.1"
+    "accessibility": "^3.0.9",
+    "express": "^5.2.1",
+    "one-liner-joke": "^1.2.2"
   }
 }
