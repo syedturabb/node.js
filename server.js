@@ -68,8 +68,8 @@
 //npm i accessibility@3.0.9
 
 
-const express = require('express')
-const app = express()
+// const express = require('express')
+// const app = express()
 
     //Middleware
 // app.use(function(req,res,next){
@@ -84,21 +84,38 @@ const app = express()
 
 
 //route creation
-app.get('/', function(req, res){
-  res.send('Champsndnion')
+// app.get('/', function(req, res){
+//   res.send('Champsndnion')
+// })
+
+// app.get('/profile', function(req, res, next){
+//   return next(new Error("something wnet wrong"))
+// })
+
+// //Error handler
+// app.use((err, req, res, next) => {
+//   console.error(err.stack)
+//   res.status(500).send('Something broke!, we dont now what ')
+// })
+
+// app.listen(3000)
+
+const express = require('express')
+const app = express()
+
+//u send data and server recieve whichis not directlyreadbalr
+//for converting ur data into readble
+app.use(express.json());
+app.use(express.urlencoded({extended:true}))
+
+app.get("/", function(req,res){
+  res.send("hello g !")
 })
 
-app.get('/profile', function(req, res, next){
+app.get("/about", function(req,res){
+  res.send("hello g !")
+})
+
+app.get("/profile", function(req,res,next){
   return next(new Error("something wnet wrong"))
 })
-
-//Error handler
-app.use((err, req, res, next) => {
-  console.error(err.stack)
-  res.status(500).send('Something broke!, we dont now what ')
-})
-
-
-app.listen(3000)
-
-
