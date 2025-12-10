@@ -15,6 +15,7 @@
     "accessibility": "^3.0.9",
     "cookie-parser": "^1.4.7",
     "express": "^5.2.1",
+    "init": "^0.1.2",
     "one-liner-joke": "^1.2.2"
   }
 }
