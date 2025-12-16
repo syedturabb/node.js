@@ -110,33 +110,38 @@
 
 
 // created server , routers , middlewares
-// const http = require("http");
-// const server = http.createServer(function(req,res){
-//                res.end("Turab this side");
-// })
-// const express = require('express');
-// const app = express();
+const http = require("http");
+const server = http.createServer(function(req,res){
+               res.end("Turab this side");
+})
+const express = require('express');
+const app = express();
 
-// app.get('/',function(req,res){
-//      res.send("route crreated");
-// })
-// app.get('/about',function(req,res){
-//   res.send("Anout page created");
-// })
-// app.get('/career',function(req,res){
-//     res.send("career page created");
-// })
+app.get('/',function(req,res){
+     res.send("route crreated");
+})
+app.get('/about',function(req,res){
+  res.send("Anout page created");
+})
+app.get('/career',function(req,res){
+    res.send("career page created");
+})
 
 // app.use(function(req,res,next){
 //   console.log('middlleware hu ma');
 //   next();
 // })
 
-// app.use(function(req,res,next){
-//   console.log("dosra middle ware hu ma");
-//   next();
-// })
-// app.listen(3000);
+
+app.get("/profile/:username", function(req,res){
+    req.params.username
+    res.send(req.params.username)
+})
+app.get("/profile/:username/:age", function(req,res){
+    req.params.username
+    res.send(`welcome, ${req.params.username}`)
+})
+app.listen(3000);
 
 //npm i accessibility@3.0.9
 // const express = require('express')
