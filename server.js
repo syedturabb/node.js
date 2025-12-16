@@ -5,6 +5,26 @@
 //       else console.log("done");
       
 // })
+
+
+const fs = require('fs');
+
+fs.appendFile("new.txt","hello my name is turab",function(err){
+            if(err)  console.log(err);
+            else    console.log("done");     
+})
+
+fs.readFile("new.txt",function(err){
+        if(err)   console.log(err);
+        else console.log("done");  
+})
+
+fs.writeFile("hey.txt","hey i am turab",function(err){
+         if(err)   console.log(err);
+         else   console.log("done");
+         
+         
+})
               //Rename a file
 // fs.rename("hey.txt","hello.txt",function(err){
 //    if(err) console.error(err);
@@ -65,6 +85,32 @@
 // server.listen(3000);
 
 
+
+//Task 1: cereated a server and routers
+// const http =  require("http");
+
+//   const server = http.createServer(function(req,res){
+//              res.end("Hello world")
+//   })
+// server.listen(3000);
+
+
+// const express = require('express');
+// const { log } = require('console');
+// const app = express();
+// const router = express.Router();
+
+// app.use('/', function(req,res){
+//      res.send("hello g");
+// })
+// app.use('/about', function(req,res){
+//      res.send("aadkod");
+// })
+
+// app.use('/api',router);
+// app.listen(3000, () => console.log('Server running on port 3000'));
+
+
 //npm i accessibility@3.0.9
 
 
@@ -100,22 +146,22 @@
 
 // app.listen(3000)
 
-const express = require('express')
-const app = express()
+// const express = require('express')
+// const app = express()
 
-//u send data and server recieve whichis not directlyreadbalr
-//for converting ur data into readble
-app.use(express.json());
-app.use(express.urlencoded({extended:true}))
+// //u send data and server recieve whichis not directlyreadbalr
+// //for converting ur data into readble
+// app.use(express.json());
+// app.use(express.urlencoded({extended:true}))
 
-app.get("/", function(req,res){
-  res.send("hello g !")
-})
+// app.get("/", function(req,res){
+//   res.send("hello g !")
+// })
 
-app.get("/about", function(req,res){
-  res.send("hello g !")
-})
+// app.get("/about", function(req,res){
+//   res.send("hello g !")
+// })
 
-app.get("/profile", function(req,res,next){
-  return next(new Error("something wnet wrong"))
-})
+// app.get("/profile", function(req,res,next){
+//   return next(new Error("something wnet wrong"))
+// })

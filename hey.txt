@@ -1,7 +1,1 @@
-hello h kese hi
-
-//bht zyada routes na create karne paree 
-//dynamic routing is used
-/author/turab
-/author/haider
-/author/ali
+new.txt
