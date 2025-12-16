@@ -7,24 +7,25 @@
 // })
 
 
-const fs = require('fs');
+// const fs = require('fs');
 
-fs.appendFile("new.txt","hello my name is turab",function(err){
-            if(err)  console.log(err);
-            else    console.log("done");     
-})
+// fs.appendFile("new.txt","hello my name is turab",function(err){
+//             if(err)  console.log(err);
+//             else    console.log("done");     
+// })
 
-fs.readFile("new.txt",function(err){
-        if(err)   console.log(err);
-        else console.log("done");  
-})
+// fs.readFile("new.txt",function(err){
+//         if(err)   console.log(err);
+//         else console.log("done");  
+// })
 
-fs.writeFile("hey.txt","hey i am turab",function(err){
-         if(err)   console.log(err);
-         else   console.log("done");
-         
-         
-})
+// fs.writeFile("hey.txt","hey i am turab",function(err){
+//          if(err)   console.log(err);
+//          else   console.log("done");
+                 
+// })
+
+
               //Rename a file
 // fs.rename("hey.txt","hello.txt",function(err){
 //    if(err) console.error(err);
@@ -93,8 +94,6 @@ fs.writeFile("hey.txt","hey i am turab",function(err){
 //              res.end("Hello world")
 //   })
 // server.listen(3000);
-
-
 // const express = require('express');
 // const { log } = require('console');
 // const app = express();
@@ -106,14 +105,40 @@ fs.writeFile("hey.txt","hey i am turab",function(err){
 // app.use('/about', function(req,res){
 //      res.send("aadkod");
 // })
-
 // app.use('/api',router);
 // app.listen(3000, () => console.log('Server running on port 3000'));
 
 
+// created server , routers , middlewares
+// const http = require("http");
+// const server = http.createServer(function(req,res){
+//                res.end("Turab this side");
+// })
+// const express = require('express');
+// const app = express();
+
+// app.get('/',function(req,res){
+//      res.send("route crreated");
+// })
+// app.get('/about',function(req,res){
+//   res.send("Anout page created");
+// })
+// app.get('/career',function(req,res){
+//     res.send("career page created");
+// })
+
+// app.use(function(req,res,next){
+//   console.log('middlleware hu ma');
+//   next();
+// })
+
+// app.use(function(req,res,next){
+//   console.log("dosra middle ware hu ma");
+//   next();
+// })
+// app.listen(3000);
+
 //npm i accessibility@3.0.9
-
-
 // const express = require('express')
 // const app = express()
 
@@ -143,7 +168,6 @@ fs.writeFile("hey.txt","hey i am turab",function(err){
 //   console.error(err.stack)
 //   res.status(500).send('Something broke!, we dont now what ')
 // })
-
 // app.listen(3000)
 
 // const express = require('express')
